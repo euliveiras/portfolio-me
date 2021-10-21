@@ -21,6 +21,9 @@ export const theme = extendTheme({
       },
       strong: {
         fontWeight: "900"
+      },
+      li: {
+        listStyle: "none"
       }
     }
   }

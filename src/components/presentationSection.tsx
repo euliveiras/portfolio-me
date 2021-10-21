@@ -12,7 +12,7 @@ const PresentationSection: React.FC = () => {
         >
             <Flex w="90%" mt="12" flexDirection={["column", "row"]} align="center">
                 <Text as="h1" fontFamily="heading" fontWeight="900" fontSize={["xx-large", "xxx-large"]} h="100%" lineHeight={["normal", "tall"]} w={["100%", "auto"]}>
-                    meu nome é<Text as="strong" color="pink.500"> Matheus Oliveira </Text>
+                    meu nome é<br/><Text as="strong" color="pink.500"> Matheus Oliveira </Text>
                     <Text>
                         & sou desenvolvedor full-stack
                         <Text as="span" color="pink.500">
