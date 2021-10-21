@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <MotionBox
       as="main"
-      w="100vw"
+      w="100%"
+      d="grid"
+      placeItems="center"
       position="absolute"
       right="4%"
       initial={{
