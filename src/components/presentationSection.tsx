@@ -10,7 +10,7 @@ const PresentationSection: React.FC = () => {
             d="grid"
             placeItems="center"
         >
-            <Flex w="90%" mt="12" flexDirection={["column", "row"]} align="center">
+            <Flex w="80%" mt="12" flexDirection={["column", "row"]} align="center">
                 <Text as="h1" fontFamily="heading" fontWeight="900" fontSize={["xx-large", "xxx-large"]} h="100%" lineHeight={["normal", "tall"]} w={["100%", "auto"]}>
                     meu nome é<br/><Text as="strong" color="pink.500"> Matheus Oliveira </Text>
                     <Text>
@@ -21,7 +21,7 @@ const PresentationSection: React.FC = () => {
                     </Text>
                 </Text>
                 <Box w={["100%", "50%"]} d="flex" justifyContent="flex-end" mt={["8", "0"]}>
-                    <Image src="/me.png" borderRadius="0.9rem" maxWidth="100%" boxSize="460px" height="100%" alt="foto de Matheus Oliveira" />
+                    <Image src="/me.png" borderRadius="0.9rem" maxWidth="100%" boxSize={"460px"} height="100%" alt="foto de Matheus Oliveira" />
                 </Box>
             </Flex>
             <Link

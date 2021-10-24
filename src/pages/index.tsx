@@ -3,6 +3,7 @@ import { Box, BoxProps } from "@chakra-ui/react";
 import { PresentationSection } from "../components/presentationSection";
 import { SectionPage } from "../components/sectionPage";
 import { motion } from "framer-motion";
+import { FooterSection } from "../components/footerSection";
 
 const MotionBox = motion<BoxProps>(Box);
 
@@ -16,18 +17,19 @@ export default function Home() {
       position="absolute"
       right="4%"
       initial={{
-        opacity: 0
+        opacity: 0,
       }}
       animate={{
         opacity: 1,
-        transform: "translateX(4%)"
+        transform: "translateX(4%)",
       }}
       transition={{
-        duration: "0.9"
+        duration: "0.9",
       }}
     >
       <PresentationSection />
       <SectionPage />
+      <FooterSection />
     </MotionBox>
   );
 }
