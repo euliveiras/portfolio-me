@@ -3,8 +3,8 @@ import { extendTheme } from "@chakra-ui/react";
 export const theme = extendTheme({
   fontSizes: {
     "large": "2rem",
-    "xxx-large": "4rem",
-    "xx-large": "3rem"
+    "xx-large": "3rem",
+    "xxx-large": "4rem"
   },
   fonts: {
     heading: "Lato, sans-serif",
@@ -18,6 +18,7 @@ export const theme = extendTheme({
       body: {
         bg: "blue.900",
         color: "white",
+        fontWeight: "600"
       },
       strong: {
         fontWeight: "900"
