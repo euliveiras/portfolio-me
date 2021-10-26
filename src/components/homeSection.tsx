@@ -1,4 +1,4 @@
-import { Box, Text, Link, Icon, Image, Flex } from "@chakra-ui/react";
+import { Box, Text, Link, Icon, } from "@chakra-ui/react";
 import { FiArrowRight } from "react-icons/fi";
 
 const PresentationSection: React.FC = () => {
@@ -6,26 +6,23 @@ const PresentationSection: React.FC = () => {
         <Box
             as="section"
             w="100%"
-            h={["auto", "100vh"]}
+            h="100vh"
             d="grid"
             placeItems="center"
         >
-            <Flex w="80%" mt="12" flexDirection={["column", "row"]} align="center">
-                <Text as="h1" fontFamily="heading" fontWeight="900" fontSize={["xx-large", "xxx-large"]} h="100%" lineHeight={["normal", "tall"]} w={["100%", "auto"]}>
-                    meu nome é<br/><Text as="strong" color="pink.500"> Matheus Oliveira </Text>
+            <Box w="80%" mt="12">
+                <Text as="h1" fontFamily="heading" fontWeight="black" fontSize={["5xl", "7xl"]} h="100%" lineHeight="tall" w={["100%", "auto"]}>
+                    meu nome é<br /><Text as="strong" color="pink.500"> Matheus Oliveira </Text>
                     <Text>
-                        & sou desenvolvedor full-stack
+                        & sou desenvolvedor<br/>full-stack
                         <Text as="span" color="pink.500">
                             .
                         </Text>
                     </Text>
                 </Text>
-                <Box w={["100%", "50%"]} d="flex" justifyContent="flex-end" mt={["8", "0"]}>
-                    <Image src="/me.png" borderRadius="0.9rem" maxWidth="100%" boxSize={"460px"} height="100%" alt="foto de Matheus Oliveira" />
-                </Box>
-            </Flex>
+            </Box>
             <Link
-                visibility={["hidden", "visible"]}
+                visibility={["hidden", "hidden", null, "visible"]}
                 href="#about-me"
                 fontFamily="heading"
                 fontWeight="700"

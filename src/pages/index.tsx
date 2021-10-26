@@ -1,13 +1,35 @@
 import { Box, BoxProps } from "@chakra-ui/react";
 
-import { PresentationSection } from "../components/presentationSection";
-import { SectionPage } from "../components/sectionPage";
+import { RichText } from "prismic-dom"
+import { GetStaticProps } from "next";
+import { prismiClient } from "../services/prismic";
+import { PresentationSection } from "../components/homeSection";
+import { AboutSection } from "../components/aboutSection";
 import { motion } from "framer-motion";
 import { FooterSection } from "../components/footerSection";
 
 const MotionBox = motion<BoxProps>(Box);
 
-export default function Home() {
+type HomeProps = {
+  document: {
+    text: string;
+    imageUrl: string;
+  };
+}
+
+type PrismicDocument = {
+  data: {
+    "about-text": {
+      text: string;
+    };
+    "about-image": {
+      url: string;
+    }
+  }
+}
+
+export default function Home({ document }: HomeProps) {
+
   return (
     <MotionBox
       as="main"
@@ -28,8 +50,23 @@ export default function Home() {
       }}
     >
       <PresentationSection />
-      <SectionPage />
+      <AboutSection text={document.text} imageUrl={document.imageUrl} />
       <FooterSection />
     </MotionBox>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const document: PrismicDocument = await prismiClient.getSingle("about-me", {})
+
+  return {
+    props: {
+      document: {
+        text: RichText.asText(document?.data["about-text"]),
+        imageUrl: document?.data["about-image"].url,
+      }
+    },
+    revalidate: 60 * 60
+  }
+}
+
