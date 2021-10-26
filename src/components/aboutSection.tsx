@@ -32,7 +32,7 @@ export const AboutSection: React.FC<aboutSectionProps> = ({ text, imageUrl }) =>
           {text}
         </Text>
 
-        <Box w={["100%", "100%", null, "100%", "50%"]} d="grid" placeItems="center" mt={[8, 12, null, 12, 12, 0]}>
+        <Box w={["100%", "100%", null, "100%", "50%"]} d="grid" placeItems="center" mt={[8, 12, null, 12, 0, 0]}>
           <Image src={imageUrl} borderRadius="0.9rem" maxWidth="100%" boxSize={"460px"} height="100%" alt="foto de Matheus Oliveira" />
         </Box>
       </Flex>
